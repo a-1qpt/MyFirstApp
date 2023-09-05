@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/xAccelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X acceleration: "
+        android:layout_above="@id/yAccelTextView"
+        android:paddingLeft="15mm"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/unitX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m/s^2"
+        android:layout_above="@id/yAccelTextView"
+        android:paddingLeft="50mm"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/yAccelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y acceleration: "
+        android:layout_above="@id/zAccelTextView"
+        android:paddingLeft="15mm"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/unitY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m/s^2"
+        android:layout_above="@id/zAccelTextView"
+        android:paddingLeft="50mm"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/zAccelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Z acceleration: "
+        android:layout_above="@+id/startButton"
+        android:paddingLeft="15mm"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/unitZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m/s^2"
+        android:layout_above="@+id/startButton"
+        android:paddingLeft="50mm"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/messageShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="message from JS"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/distanceShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="distance:     m"
+        android:layout_below="@+id/zAccelTextView"
+        android:paddingLeft="15mm"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_above="@id/stopButton"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>
